@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lahore AQI — Privacy Policy</title>
+<link rel="stylesheet" href="_style.css">
+</head>
+<body>
+<main>
+  <!--
+    BEFORE PUBLISHING — fill in every [BRACKETED] placeholder:
+      [OPERATOR_NAME]   the organisation that operates the app / research study
+      [CONTACT_EMAIL]   a monitored mailbox for privacy + deletion requests
+    and make sure the backend is already serving over HTTPS (the "Security"
+    section below states data is encrypted in transit).
+  -->
+  <header>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Lahore AQI (Android) · Last updated: 31 August 2026</p>
+  </header>
+
+  <p>Lahore AQI ("the app") is operated by <strong>[OPERATOR_NAME]</strong> ("we", "us"). The app shows live and forecast air-quality (PM2.5 / AQI) readings for Lahore and sends optional air-quality alerts. This policy explains what data the app collects, why, who it is shared with, and how you can delete it.</p>
+
+  <h2>1. Data we collect</h2>
+  <p>The app does not ask for your name, email address or a password. When you finish setup, our server creates a random <strong>app ID</strong> for your installation. Everything below is stored against that ID.</p>
+
+  <table>
+    <thead><tr><th>Data</th><th>When it is collected</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Alert area</strong> (the Lahore area you pick)</td><td>Setup, and whenever you change it in Settings</td><td>To send you forecasts and alerts for that area</td></tr>
+      <tr><td><strong>Alert threshold</strong></td><td>When you change it in Settings</td><td>To decide which alerts to send you</td></tr>
+      <tr><td><strong>Push-notification token</strong> (Expo / Firebase Cloud Messaging)</td><td>When you allow notifications</td><td>To deliver alerts to your device</td></tr>
+      <tr><td><strong>App version</strong></td><td>On each launch</td><td>To know which features your build supports and to tell you when an update is required</td></tr>
+      <tr><td><strong>Device location</strong> (GPS, approximate or precise)</td><td>Only when you tap "use my current location" and grant the system permission, or on launch if you granted it earlier</td><td>To pick the nearest monitoring area for you. The location is used on your device; the raw coordinates are only sent to our analytics service if you have joined the research study (see section 3)</td></tr>
+      <tr><td><strong>Mobile number</strong> and <strong>health information</strong> (whether you have asthma or respiratory issues)</td><td>Only if you choose to enter them under Settings → Research Study Participation</td><td>For the air-quality awareness research study described in the app. Both are optional</td></tr>
+      <tr><td><strong>Crash and diagnostic reports</strong> (stack trace, device model and OS version, app version, the screens you visited just before a crash, API response times)</td><td>When the app crashes or hits an error</td><td>To find and fix bugs. Reports never include your app ID, phone number, health information or location</td></tr>
+      <tr><td><strong>Usage analytics</strong> (screens viewed, buttons tapped, alert settings, the area whose AQI you are viewing, device model and OS version, IP address, approximate country/city derived from IP)</td><td>While you use the app</td><td>To understand how the app is used and to improve it</td></tr>
+    </tbody>
+  </table>
+
+  <h2>2. How analytics work</h2>
+  <p>We use <a href="https://posthog.com" rel="noopener">PostHog</a> to collect usage analytics. By default these events are recorded under a random device identifier and are <strong>not linked to you as a person</strong>. Session recordings are disabled.</p>
+  <p>Usage events include which Lahore area's AQI you were viewing (the area's map coordinates, not your device position), the alerts you configured and the screens you opened.</p>
+
+  <h2>3. Research study participation (optional)</h2>
+  <p>If you enter a mobile number in Settings → Research Study Participation, you are consenting to take part in the research study. From that point:</p>
+  <ul>
+    <li>your analytics events are linked to your app ID, mobile number and the health information you provided;</li>
+    <li>your device's GPS coordinates are recorded when you use the current-location feature;</li>
+    <li>the research team may contact you on the number you provided.</li>
+  </ul>
+  <p>Research data is used only for this study. It is never sold or shared with advertisers or any other third party. You can withdraw at any time by clearing your mobile number in Settings (which stops the linking going forward) or by deleting your data (section 6), which removes it entirely.</p>
+
+  <h2>4. Who we share data with</h2>
+  <p>We do not sell your data. We share it only with the service providers that run the app, each of which processes it on our behalf:</p>
+  <table>
+    <thead><tr><th>Provider</th><th>What they receive</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td>Supabase</td><td>App ID, alert area, threshold, push token, app version, optional mobile number and health information</td><td>Database hosting</td></tr>
+      <tr><td>PostHog (US)</td><td>Usage analytics; plus app ID, mobile number, health information and GPS if you joined the research study</td><td>Analytics</td></tr>
+      <tr><td>Sentry</td><td>Crash and diagnostic reports (no identifiers)</td><td>Error monitoring</td></tr>
+      <tr><td>Expo and Google Firebase Cloud Messaging</td><td>Push-notification token</td><td>Delivering notifications</td></tr>
+      <tr><td>Google Maps Platform</td><td>Standard map-tile requests from your device (including its IP address)</td><td>Rendering the live map</td></tr>
+      <tr><td>Amazon Web Services</td><td>All server-side data above</td><td>Hosting our API server</td></tr>
+    </tbody>
+  </table>
+  <p>Air-quality readings come from the Urban Unit sensor network and weather data from Open-Meteo; no data about you is sent to either.</p>
+
+  <h2>5. Retention</h2>
+  <p>We keep your data until you delete it (section 6). If you uninstall the app without deleting your data, the record tied to your app ID remains on our servers; deleting it afterwards requires the app ID (see the deletion page for how to find it) — otherwise contact us and we will do our best to locate it from the details you provide.</p>
+
+  <h2>6. Deleting your data</h2>
+  <p>You can delete everything we hold about you at any time:</p>
+  <ul>
+    <li><strong>In the app:</strong> Settings → Privacy &amp; data → <em>Delete my data</em>. This removes your record from our database and your person profile and events from our analytics, then returns the app to setup.</li>
+    <li><strong>Without the app:</strong> follow the steps at <a href="delete-my-data.html">delete-my-data.html</a>.</li>
+  </ul>
+  <p>Deletion is permanent and normally completes within 30 days (database records are removed immediately; analytics purges are processed asynchronously).</p>
+
+  <h2>7. Security</h2>
+  <p>Data is encrypted in transit (HTTPS) between the app, our servers and our providers. Access to our database and analytics is restricted to the team operating the app. No method of transmission or storage is completely secure, so we cannot guarantee absolute security.</p>
+
+  <h2>8. Permissions the app uses</h2>
+  <ul>
+    <li><strong>Location</strong> — optional; only to choose the nearest monitoring area. Never used in the background.</li>
+    <li><strong>Notifications</strong> — optional; to deliver air-quality alerts.</li>
+    <li><strong>Internet</strong> — to fetch readings and forecasts.</li>
+  </ul>
+
+  <h2>9. Children</h2>
+  <p>The app is not directed at children under 13 and we do not knowingly collect personal data from them. If you believe a child has provided us personal data, contact us and we will delete it.</p>
+
+  <h2>10. Changes to this policy</h2>
+  <p>We will post any changes on this page and update the date above. Material changes will also be announced in the app.</p>
+
+  <h2>11. Contact</h2>
+  <p>Questions or requests about your data: <a href="mailto:[CONTACT_EMAIL]">[CONTACT_EMAIL]</a></p>
+
+  <footer>Google Play package: <code>com.ideas.lahoreaqi</code> · <a href="index.html">All legal pages</a></footer>
+</main>
+</body>
+</html>
