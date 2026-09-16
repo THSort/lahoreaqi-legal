@@ -17,7 +17,7 @@
   -->
   <header>
     <h1>Privacy Policy</h1>
-    <p class="meta">Lahore AQI (Android) · Last updated: 31 August 2026</p>
+    <p class="meta">Lahore AQI (Android) · Last updated: 16 September 2026</p>
   </header>
 
   <p>Lahore AQI ("the app") is operated by <strong>Taimur Hassan Sarmad</strong> ("we", "us"). The app shows live and forecast air-quality (PM2.5 / AQI) readings for Lahore and sends optional air-quality alerts. This policy explains what data the app collects, why, who it is shared with, and how you can delete it.</p>
@@ -33,8 +33,8 @@
       <tr><td><strong>Push-notification token</strong> (Expo / Firebase Cloud Messaging)</td><td>When you allow notifications</td><td>To deliver alerts to your device</td></tr>
       <tr><td><strong>App version</strong></td><td>On each launch</td><td>To know which features your build supports and to tell you when an update is required</td></tr>
       <tr><td><strong>Device location</strong> (GPS, approximate or precise)</td><td>Only when you tap "use my current location" and grant the system permission, or on launch if you granted it earlier</td><td>To pick the nearest monitoring area for you. The location is used on your device; the raw coordinates are only sent to our analytics service if you have joined the research study (see section 3)</td></tr>
-      <tr><td><strong>Mobile number</strong> and <strong>health information</strong> (whether you have asthma or respiratory issues)</td><td>Only if you choose to enter them under Settings → Research Study Participation</td><td>For the air-quality awareness research study described in the app. Both are optional</td></tr>
-      <tr><td><strong>Crash and diagnostic reports</strong> (stack trace, device model and OS version, app version, the screens you visited just before a crash, API response times)</td><td>When the app crashes or hits an error</td><td>To find and fix bugs. Reports never include your app ID, phone number, health information or location</td></tr>
+      <tr><td><strong>Mobile number</strong></td><td>Only if you choose to enter it under Settings → Research Study Participation</td><td>For the air-quality awareness research study described in the app. Optional</td></tr>
+      <tr><td><strong>Crash and diagnostic reports</strong> (stack trace, device model and OS version, app version, the screens you visited just before a crash, API response times)</td><td>When the app crashes or hits an error</td><td>To find and fix bugs. Reports never include your app ID, phone number or location</td></tr>
       <tr><td><strong>Usage analytics</strong> (screens viewed, buttons tapped, alert settings, the area whose AQI you are viewing, device model and OS version)</td><td>While you use the app</td><td>To understand how the app is used and to improve it</td></tr>
     </tbody>
   </table>
@@ -46,19 +46,20 @@
   <h2>3. Research study participation (optional)</h2>
   <p>If you enter a mobile number in Settings → Research Study Participation, you are consenting to take part in the research study. From that point:</p>
   <ul>
-    <li>your analytics events are linked to your app ID, mobile number and the health information you provided;</li>
+    <li>your analytics events are linked to your app ID and mobile number;</li>
     <li>your device's GPS coordinates are recorded when you use the current-location feature;</li>
     <li>the research team may contact you on the number you provided.</li>
   </ul>
   <p>Research data is used only for this study. It is never sold or shared with advertisers or any other third party. You can withdraw at any time by clearing your mobile number in Settings (which stops the linking going forward) or by deleting your data (section 6), which removes it entirely.</p>
+  <p>Earlier pilot versions of the app (distributed outside Google Play) also let research participants optionally record whether they have asthma or respiratory issues. Current versions no longer collect this. If you entered it in a pilot version, the stored value remains on your record until you delete your data (section 6), which removes it.</p>
 
   <h2>4. Who we share data with</h2>
   <p>We do not sell your data. We share it only with the service providers that run the app, each of which processes it on our behalf:</p>
   <table>
     <thead><tr><th>Provider</th><th>What they receive</th><th>Purpose</th></tr></thead>
     <tbody>
-      <tr><td>Supabase</td><td>App ID, alert area, threshold, push token, app version, optional mobile number and health information</td><td>Database hosting</td></tr>
-      <tr><td>PostHog (US)</td><td>Usage analytics; plus app ID, mobile number, health information and GPS if you joined the research study</td><td>Analytics</td></tr>
+      <tr><td>Supabase</td><td>App ID, alert area, threshold, push token, app version, optional mobile number</td><td>Database hosting</td></tr>
+      <tr><td>PostHog (US)</td><td>Usage analytics; plus app ID, mobile number and GPS if you joined the research study</td><td>Analytics</td></tr>
       <tr><td>Sentry</td><td>Crash and diagnostic reports (no identifiers)</td><td>Error monitoring</td></tr>
       <tr><td>Expo and Google Firebase Cloud Messaging</td><td>Push-notification token</td><td>Delivering notifications</td></tr>
       <tr><td>Google Maps Platform</td><td>Standard map-tile requests from your device (including its IP address)</td><td>Rendering the live map</td></tr>
